@@ -86,4 +86,14 @@ def target_summary_with_cat(dataframe, target, categorical_col):
 
 
 def target_summary_with_num(dataframe, target, numerical_col):
+    """
+    target_summary_with_num for given dataframe
+
+    :param dataframe: Keşfedilecek veri seti.
+    :param target: Veri setindeki bağımlı değişken
+    :param numerical_col: Veri setindeki numeric sütunlar
+    :return:
+    """
     print(dataframe.groupby(target).agg({numerical_col: "mean"}), end="\n\n\n")
+
+
